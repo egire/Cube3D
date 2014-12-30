@@ -1,16 +1,9 @@
 var container, stats;
-
 var camera, scene, renderer;
-
 var pointLight;
-
 var clock, time = 0, delta = 0.0;
-
 var group = new THREE.Object3D();
-
 var tracks = 20;
-
-var frame = 0;
 
 function onLoad() {
     init();
@@ -89,8 +82,6 @@ function render() {
     rotateChildren( group, 0.5 );
     
     radialWaveChildren( group, 1.25 );
-    
-    frame += 1;
     
     renderer.render( scene, camera );
 }
